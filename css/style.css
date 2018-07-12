@@ -1,0 +1,38 @@
+/* Login Section */
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#background {
+  background-image: url('../img/background-login.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+#logoLogin {
+  height: 13em;
+  width: 12em;
+}
+
+/* Botones */
+.btn-custom {
+  background-color: #3399CC;
+  color: white;
+  display: block;
+}
+
+#fbkBtn {
+  background-color: #3b5998;
+  color: white;
+  display: inline-block;
+}
+
+#googleBtn {
+  background-color: white;
+  color: rgb(54, 54, 54);
+  display: inline-block;
+}
