@@ -1,13 +1,15 @@
 /* Login Section */
 html {
   height: 100vh;
+  width: 100vw;
 }
 
 body {
   min-height: 100vh;
+  min-width: 100vw;
 }
 
-#background {
+#loginPage {
   background-image: url('../img/background-login.jpg');
   background-size: cover;
   height: 100vh;
@@ -35,4 +37,27 @@ body {
   background-color: white;
   color: rgb(54, 54, 54);
   display: inline-block;
+}
+
+/* Funcionalidad Aparecer y Desaparecer */
+.disappear {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Registro de usuario */
+.bg-green {
+  background-color: #5BFB8D;
+  border-radius: 0px 0px 120px 120px;
+}
+
+#nav-text-custom {
+  color: black;
+}
+
+.userInfo {
+  padding: 0;
 }
