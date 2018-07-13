@@ -29,7 +29,7 @@
 
 <body>
   <!-- Login -->
-  <div class="container-fluid disappear" id="loginPage">
+  <div class="container-fluid show" id="loginPage">
     <section>
       <!-- Logo -->
       <div class="row">
@@ -44,19 +44,19 @@
         <div class="col-sm"></div>
         <div class="col-sm-4">
           <form class="form-signin">
-            <input type="text" class="form-control" placeholder="Correo Electrónico">
-            <input type="password" class="form-control" placeholder="Contraseña">
-            <button class="btn btn-md btn-custom btn-block" type="button">
+            <input id="email" type="text" class="form-control" placeholder="Correo Electrónico">
+            <input id="password" type="password" class="form-control" placeholder="Contraseña">
+            <button id="loginBtn" class="btn btn-md btn-custom btn-block" type="button">
               Ingresar</button>
           </form>
           <p class="font-weight-bold text-center pt-3">o ingresa con:</p>
           <div class="container text-center">
-            <button class="btn btn-sm text-center my-1" id="fbkBtn" type="button">
+            <button id="fbkBtn" class="btn btn-sm text-center my-1" type="button">
               <i class="fab fa-facebook"></i> Entrar con Facebook</button>
-            <button class="btn btn-sm text-center my-1" id="googleBtn" type="button">
+            <button id="googleBtn" class="btn btn-sm text-center my-1" type="button">
               <i class="fab fa-google"></i> Entrar con Google</button>
           </div>
-          <button class="btn btn-sm btn-custom text-center mx-auto my-1" type="button">
+          <button id="registerBtn" class="btn btn-sm btn-custom text-center mx-auto my-1" type="button">
             Registrarse</button>
         </div>
         <div class="col-sm"></div>
@@ -65,7 +65,7 @@
   </div>
 
   <!-- Registro de Usuario -->
-  <div class="container-fluid show" id="userRegistration">
+  <div class="container-fluid disappear" id="userRegistration">
     <section>
       <nav class="navbar navbar-light bg-green">
         <span class="navbar-text mx-auto" id="nav-text-custom">
