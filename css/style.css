@@ -9,15 +9,25 @@ body{
     margin: auto;
     position: relative;
     width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+
   }
 
   .cover-container{
       background: #5BFB8D;
       background: -webkit-radial-gradient(bottom, #5BFB8D 12%, #5BFB8D);
       background: radial-gradient(at bottom, #5BFB8D 12%, #5BFB8D)
+      padding:left;
       
-      
+     
+          
   }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
   .fb-profile-block-thumb{
     display: block;
     height: 315px;
@@ -25,12 +35,12 @@ body{
     overflow: hidden;
     position: relative;
     text-decoration: none;
+    margin: auto;
+   
+
     
   }
-  .fb-profile-block-menu {
-    border: 1px solid #d3d6db;
-    border-radius: 0 0 3px 3px;
-  }
+  
   .profile-img a{
       bottom: 15px;
       box-shadow: none;
@@ -110,17 +120,17 @@ body{
  
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 9px 9px 9px 35px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 35px;
+    color: #f5efef;
     display: block;
     transition: 0.3s
 }
  
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #3399cc;
 }
  
 
@@ -171,7 +181,7 @@ body {
 }
  
 
-    .sidenav {padding-top: 15px;}
+    .sidenav {padding-top: 95px;}
     .sidenav a {font-size: 18px;}
 }
  
