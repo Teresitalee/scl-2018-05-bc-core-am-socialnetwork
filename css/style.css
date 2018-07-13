@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* estilos al muro timeline*/
 body{
@@ -218,3 +219,236 @@ a svg{
     }
   }
 
+=======
+
+
+
+/* estilos al muro timeline*/
+body{
+    width: 110%;
+    
+}
+.fb-profile-block {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+
+  }
+
+  .cover-container{
+      background: #5BFB8D;
+      background: -webkit-radial-gradient(bottom, #5BFB8D 12%, #5BFB8D);
+      background: radial-gradient(at bottom, #5BFB8D 12%, #5BFB8D)
+      padding:left;
+      
+     
+          
+  }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .fb-profile-block-thumb{
+    display: block;
+    height: 315px;
+    width: 1415px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    margin: auto;
+   
+
+    
+  }
+  
+  .profile-img a{
+      bottom: 15px;
+      box-shadow: none;
+      display: block;
+      left: 15px;
+      padding:1px;
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+      z-index:9;
+  }
+  .profile-img img {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+    height:158px;
+    padding: 5px;
+    width:158px;
+  }
+  .profile-name {
+    bottom: 60px;
+    left: 200px;
+    position: absolute;
+  }
+  .profile-name h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    max-width: 275px;
+    position: relative;
+    text-transform: uppercase;
+  }
+ 
+ 
+ 
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+
+@media (min-width: 1200px) { ... }
+
+   
+  /* fin de estilos al muro timeline*/
+
+
+  .card{
+      top:20px;
+      margin-bottom: 20px;  
+  }
+
+  /* The side navigation menu */
+ .sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+ 
+/* The navigation menu links */
+.sidenav a {
+    padding: 9px 9px 9px 35px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #f5efef;
+    display: block;
+    transition: 0.3s
+}
+ 
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #3399cc;
+}
+ 
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+ 
+
+    transition: margin-left .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+}
+body {
+  overflow-x: hidden;
+}
+ 
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+ 
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+ 
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+ 
+
+    .sidenav {padding-top: 95px;}
+    .sidenav a {font-size: 18px;}
+}
+ 
+a svg{
+  transition:all .5s ease;
+ 
+  &:hover{
+    #transform:rotate(180deg);
+  }
+}
+ 
+#ico{
+  display: none;
+}
+ 
+.menu{
+  background: #000;
+  display: none;
+  padding: 5px;
+  width: 320px;
+  @include border-radius(5px);
+ 
+  #transition: all 0.5s ease;
+ 
+  a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 2px;
+    margin: 3px 0;
+    text-decoration: none;
+    background: #444;
+ 
+    &:nth-child(1){
+      margin-top: 0;
+      @include border-radius(3px 3px 0 0 );
+    }
+    &:nth-child(5){
+      margin-bottom: 0;
+      @include border-radius(0 0 3px 3px);
+    }
+ 
+    &:hover{
+      background: #555;
+    }
+  }
+>>>>>>> upstream/master
