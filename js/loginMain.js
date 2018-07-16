@@ -2,7 +2,7 @@ document.getElementById('loginBtn').addEventListener('click', () => {
   login();
 });
 document.getElementById('registerBtn').addEventListener('click', () => {
-  register();
+  goToRegistration();
 });
 document.getElementById('fbkBtn').addEventListener('click', () => {
   loginFacebook();
@@ -10,7 +10,25 @@ document.getElementById('fbkBtn').addEventListener('click', () => {
 document.getElementById('googleBtn').addEventListener('click', () => {
   loginGoogle();
 });
+document.getElementById('backBtn').addEventListener('click', () => {
+  backToLogin();
+});
+document.getElementById('nextBtn').addEventListener('click', () => {
+  register();
+});
 
+/*
+window.onload = () => {
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      console.log('User: ' + JSON.stringify(user));
+      window.open('../home.html', '_self', 'true');
+    } else {
+      loginPage.style.display = 'block';
+    }
+  });
+};
+*/
 function login() {
   const emailValue = email.value;
   const passwordValue = password.value;
@@ -25,14 +43,23 @@ function login() {
     });
 }
 
+function backToLogin() {
+  loginPage.style.display = 'block';
+  userRegistration.style.display = 'none';
+}
+
+function goToRegistration() {
+  loginPage.style.display = 'none';
+  userRegistration.style.display = 'block';
+}
+
 function register() {
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const emailValue = userEmail.value;
+  const passwordValue = userPassword.value;
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado correctamente');
-      loginPage.style.display = 'none';
-      userRegistration.style.display = 'block';
+      window.open('../home.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error de Firebase: ' + error.code);
