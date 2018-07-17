@@ -320,3 +320,37 @@ a{
 
   }
 }
+.profile-card{
+  text-align:left;
+}
+
+.demo-avatar {
+  top: -3px;
+  position: relative;
+  display: inline-block;
+  background-image: url('/assets/img/pic_user.png');
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  background-size: 60px;
+  border-radius: 20px;
+}
+
+.demo-avatar-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#span user-name {
+  margin-top: 2em;
+
+}
