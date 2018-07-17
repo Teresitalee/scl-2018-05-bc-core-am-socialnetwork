@@ -1,38 +1,15 @@
-/*
-window.onload = () => {
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      console.log('User: ' + JSON.stringify(user));
-      window.open('../muro.html', '_self', 'true');
-    } else {
-      loginPage.style.display = 'block';
-    }
-  });
-};
-*/
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user == true) {
+    console.log('User: ' + JSON.stringify(user));
+    goToWall();
+  } else {
+    loginPage.style.display = 'block';
+  }
+});
 
-document.getElementById('loginBtn').addEventListener('click', () => {
-  login();
-});
-document.getElementById('registerBtn').addEventListener('click', () => {
-  goToRegistration();
-});
-document.getElementById('fbkBtn').addEventListener('click', () => {
-  loginFacebook();
-});
-document.getElementById('googleBtn').addEventListener('click', () => {
-  loginGoogle();
-});
-document.getElementById('backBtn').addEventListener('click', () => {
-  backToLogin();
-});
-document.getElementById('nextBtn').addEventListener('click', () => {
-  register();
-  saveToDB();
-});
-document.getElementById('logoutBtn').addEventListener('click', () => {
-  logOut();
-});
+function goToWall() {
+  location.href = '../../muro.html';
+}
 
 function login() {
   const emailValue = email.value;
