@@ -10,14 +10,14 @@ body {
 }
 
 #loginPage {
-  background-image: url('../img/background-login.jpg');
+  background-image: url('../img/background.png');
   background-size: cover;
   height: 100vh;
 }
 
 #logoLogin {
-  height: 13em;
-  width: 12em;
+  height: 14em;
+  width: 17em;
 }
 
 /* Botones */
