@@ -45,19 +45,19 @@
         <div class="col-sm"></div>
         <div class="col-sm-4">
           <form class="form-signin">
-            <input type="text" class="form-control" placeholder="Correo Electrónico">
-            <input type="password" class="form-control" placeholder="Contraseña">
-            <button class="btn btn-md btn-custom btn-block" type="button">
+            <input id="email" type="text" class="form-control" placeholder="Correo Electrónico">
+            <input id="password" type="password" class="form-control" placeholder="Contraseña">
+            <button id="loginBtn" class="btn btn-md btn-custom btn-block" type="button">
               Ingresar</button>
           </form>
           <p class="font-weight-bold text-center pt-3">o ingresa con:</p>
           <div class="container text-center">
-            <button class="btn btn-sm text-center my-1" id="fbkBtn" type="button">
+            <button id="fbkBtn" class="btn btn-sm text-center my-1" type="button">
               <i class="fab fa-facebook"></i> Entrar con Facebook</button>
-            <button class="btn btn-sm text-center my-1" id="googleBtn" type="button">
+            <button id="googleBtn" class="btn btn-sm text-center my-1" type="button">
               <i class="fab fa-google"></i> Entrar con Google</button>
           </div>
-          <button class="btn btn-sm btn-custom text-center mx-auto my-1" type="button">
+          <button id="registerBtn" class="btn btn-sm btn-custom text-center mx-auto my-1" type="button">
             Registrarse</button>
         </div>
         <div class="col-sm"></div>
@@ -66,16 +66,16 @@
   </div>
 
   <!-- Registro de Usuario -->
-  <div class="container-fluid show" id="userRegistration">
+  <div class="container-fluid disappear" id="userRegistration">
     <section>
       <nav class="navbar navbar-light bg-green">
         <span class="navbar-text mx-auto" id="nav-text-custom">
           Crea tu cuenta
         </span>
       </nav>
-      <div class="row mt-4">
+      <div class="row mt-3">
         <div class="col-sm"></div>
-        <div class="col-sm-4 userInfo">
+        <div class="col-sm-4 userInfo px-3">
           <label for="userName">Ingresa un nombre de usuario o Alias</label>
           <input class="form-control mb-2" type="text" placeholder="Usuario" id="userName">
           <label for="userEmail">Ingresa un correo electrónico</label>
@@ -86,14 +86,27 @@
           </label>
           <input class="form-control mb-2" type="password" placeholder="Contraseña" id="userPassword">
 
-          <select class="form-control form-control">
-            <option>¿Qué enfermedad(es) tienes?</option>
-            <option>¿Qué tienes?</option>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Enfermedad Autoinmune
-            </label>
-          </select>
+          <div class="form-check">
+            <p class="mb-1">¿Que enfermedad(es) tienes?</p>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="autoinmune">Enfermedad Autoinmune</label>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="kidney">Insuficiencia Renal Crónica</label>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="thyroid">Hipo/Hipertiroidismo</label>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="hypertension">Hipertensión</label>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="diabetes">Diabetes</label>
+            <label class="form-check-label d-block">
+              <input type="checkbox" class="form-check-input" id="diseaseOther">Otra</label>
+          </div>
+          <div class="text-center">
+            <div class="btn-group">
+              <button class="btn btn-sm btn-custom mr-2 mt-3 d-block" type="button">Atrás</button>
+              <button class="btn btn-sm btn-custom ml-2 mt-3 d-block" type="button">Siguiente</button>
+            </div>
+          </div>
         </div>
         <div class="col-sm"></div>
       </div>
@@ -108,7 +121,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/loginMain.js"></script>
 </body>
 
 </html>
