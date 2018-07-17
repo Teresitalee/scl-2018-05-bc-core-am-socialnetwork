@@ -105,3 +105,4 @@ function loginGoogle() {
     console.log('Credencial de usuario con problemas: ' + error.credential);
   });
 }
+
