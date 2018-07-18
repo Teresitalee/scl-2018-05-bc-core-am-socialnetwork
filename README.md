@@ -14,10 +14,10 @@ Por ello estamos desarrollando **SIN RESTRICCIONES**, una red social en la cual 
 Realizamos un sketch en papel, diseñando las ideas generales del producto 
 reflejamos las ideas generales, el menu de navegación, donde se ubicará el logo, y las ideas generales en donde el usuario insertará la información.
 El prototipo de alta fidelidad fue realizado con el programa Figma. 
-Para ver el prototipo y la funcionalidad de este haz click aquí 
+Para ver el prototipo y la funcionalidad de este haz click [aquí](https://www.figma.com/file/fSgQT36x4jqthGuUZq8i6plx/Sin-restricciones)
 
 
-## **Metodología de trabajo**
+### **Metodología de trabajo**
 
 Utilizamos Trello como herramienta para organizar nuestras tareas, y el tiempo que requiere cada una, como también la complejidad de estas.
 Para comunicarnos usamos Slack, en donde creamos un grupo para enviarnos informació y realizar consultas sobre el proyecto. 
