@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>socialNetwork</title>
+    <title>Sin Restricciones</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="assets/css/homeStyle.css">
      <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -27,6 +28,23 @@
     };
     firebase.initializeApp(config);
 </script>
+=======
+    <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAhh2JYaG7UV96OZ_nEzaRg1eY-eIKxzuM",
+      authDomain: "sin-restricciones.firebaseapp.com",
+      databaseURL: "https://sin-restricciones.firebaseio.com",
+      projectId: "sin-restricciones",
+      storageBucket: "sin-restricciones.appspot.com",
+      messagingSenderId: "180054496867"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+>>>>>>> upstream/master
 </head>
 
 <body>
@@ -34,9 +52,9 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#"><i class="fa fa-spoon"></i>&nbsp;SIN RESTRICCIONES</a></li>
-                <li> <a href="#">&nbsp;<i class="fa fa-user-circle-o"></i>&nbsp; &nbsp;Perfil</a></li>
-                <li> <a href="#">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp; &nbsp;Muro</a></li>
-                <li> <a href="#">&nbsp;<i class="fa fa-heartbeat"></i>&nbsp; &nbsp;Salud &amp; Tips</a><a href="#">&nbsp;<i class="fa fa-sign-out"></i>&nbsp; &nbsp;Cerrar Sesión</a></li>
+                <li> <a href="perfil.html">&nbsp;<i class="fa fa-user-circle-o"></i>&nbsp; &nbsp;Perfil</a></li>
+                <li> <a href="muro.html">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp; &nbsp;Muro</a></li>
+                <li> <a href="salud.html">&nbsp;<i class="fa fa-heartbeat"></i>&nbsp; &nbsp;Salud &amp; Tips</a><a href="index.html" id="logoutBtn">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;Cerrar Sesión</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -90,7 +108,11 @@
             <div class="intro">
                 <h4 class="text-center">¿Qué estas pensando?</h4>
                 <p class="text-center"></p>
+<<<<<<< HEAD
             <textarea class="txt" id="comment" rows="4" cols="60" placeholder="Ingresar texto"></textarea>
+=======
+            <textarea rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+>>>>>>> upstream/master
         </div>
             <div class="buttons">
                 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">amigos</button>
@@ -125,8 +147,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+<<<<<<< HEAD
     <script src="assets/js/main.js"></script>
     <script src="assets/js/muro.js"></script>
+=======
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/main.js"></script>
+>>>>>>> upstream/master
 </body>
 
 </html>
