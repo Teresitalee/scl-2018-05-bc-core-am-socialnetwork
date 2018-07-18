@@ -290,3 +290,15 @@ a svg {
       .profile-card {
         text-align: left;
       }
+    }
+
+  }
+}
+.profile-card{
+  text-align:left;
+}
+.card{
+  font-size: 20px;
+  margin-left: 20px;
+
+}

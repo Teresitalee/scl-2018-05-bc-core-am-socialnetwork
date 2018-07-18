@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
   <link rel="stylesheet" href="assets/css/styles.min.css">
   <link rel="stylesheet" href="assets/css/homeStyle.css">
+<<<<<<< HEAD
+=======
+  <!-- iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+>>>>>>> upstream/master
   <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
@@ -25,8 +30,8 @@
       messagingSenderId: "180054496867"
     };
     firebase.initializeApp(config);
-  </script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+</script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -35,21 +40,21 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
           <a href="#">
-            <i class="fa fa-spoon"></i>&nbsp;SIN RESTRICCIONES</a>
+            <i class="fa fa-spoon"></i>SIN RESTRICCIONES</a>
         </li>
         <li>
-          <a href="perfil.html">&nbsp;
-            <i class="fa fa-user-circle-o"></i>&nbsp; &nbsp;Perfil</a>
+          <a href="perfil.html">
+            <i class="fa fa-user-circle-o"></i>Perfil</a>
         </li>
         <li>
-          <a href="muro.html">&nbsp;
-            <i class="fa fa-newspaper-o"></i>&nbsp; &nbsp;Muro</a>
+          <a href="muro.html">
+            <i class="fa fa-newspaper-o"></i>Muro</a>
         </li>
         <li>
-          <a href="salud.html">&nbsp;
-            <i class="fa fa-heartbeat"></i>&nbsp; &nbsp;Salud &amp; Tips</a>
-          <a href="index.html" id="logoutBtn">&nbsp;
-            <i class="fa fa-sign-out"></i>&nbsp;Cerrar Sesión</a>
+          <a href="salud.html">
+            <i class="fa fa-heartbeat"></i>Salud & Tips</a>
+          <a href="index.html" id="logoutBtn">
+            <i class="fa fa-sign-out"></i>Cerrar Sesión</a>
         </li>
       </ul>
     </div>
@@ -67,9 +72,6 @@
                   <span id="user-name"></span>
                 </div>
               </div>
-              <!--  
-                            <div class="profile-back"><img class="rounded-circle profile-pic" src="assets/img/pic_user.png"></div>
-                            <ul class="social-list"> -->
             </div>
           </div>
         </div>
@@ -79,7 +81,7 @@
   <div class="highlight-clean">
     <div class="container">
       <div class="intro">
-        <h4 class="text-center">¿Qué estas pensando?</h4>
+        <h4 class="text-center mt-5">¿Qué estas pensando?</h4>
         <p class="text-center"></p>
 
         <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
@@ -95,6 +97,7 @@
         <button class="btn btn-light" id="publishBtn" type="button">PUBLICAR</button>
       </div>
     </div>
+    <!-- Container messages -->
     <div class="container">
       <div class="intro" id="userMsg">
 
