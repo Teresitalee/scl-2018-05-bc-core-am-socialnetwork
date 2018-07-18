@@ -1,8 +1,15 @@
-/* estilos al muro timeline*/
+html {
+  height: 100vh;
+  width: 100vw;
+}
 
 body {
-  width: 110%;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
+
+/* estilos al muro timeline*/
 
 .fb-profile-block {
   margin: auto;
@@ -174,10 +181,6 @@ margin-left: .5s;
 padding: 20px;
 overflow:hidden;
 width:100%;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .topnav {

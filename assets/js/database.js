@@ -43,11 +43,12 @@ db.collection("messages").onSnapshot((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().text}`);
     userPosts.innerHTML += `
+    <div class="boxMsg">
     <h4 class="text-center">${doc.id}</h4>
     <p class="text-center">${doc.data().creator}</p>
-    <textarea rows="4" cols="60" >${doc.data().text}</textarea>
-    <div><button class="btn-post"><i class="fas fa-edit"></i></button></div>
-    <div><button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>
+    <p>${doc.data().text}</p>
+    <button class="btn-post"><i class="fas fa-edit"></i></button>
+    <button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>
     `;
   });
 });
