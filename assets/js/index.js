@@ -7,6 +7,24 @@
   }
 });*/
 
+var userPic = document.getElementById('user-pic');
+var userName = document.getElementById('user-name');
+
+function inicializarFire() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      let userDisplayName = user.displayName;
+      let userPhoto = user.photoURL;
+
+      userName.textContent = userDisplayName;
+      userPic.style.backgroundImage = 'url(' + userPhoto + ')';
+    }
+  });
+}
+window.onload = function() {
+  inicializarFire();
+};
+
 function goToWall() {
   location.href = '../../muro.html';
 }
