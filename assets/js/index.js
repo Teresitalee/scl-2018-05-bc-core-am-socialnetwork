@@ -1,14 +1,18 @@
-firebase.auth().onAuthStateChanged(function(user) {
+/*firebase.auth().onAuthStateChanged(function(user) {
   if (user == true) {
-    console.log('User: ' + JSON.stringify(user));
+    //console.log('User: ' + JSON.stringify(user));
     goToWall();
   } else {
-    loginPage.style.display = 'block';
+    goToIndex();
   }
-});
+});*/
 
 function goToWall() {
   location.href = '../../muro.html';
+}
+
+function goToIndex() {
+  location.href = '../../index.html';
 }
 
 function login() {
