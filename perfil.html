@@ -4,13 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>socialNetwork</title>
+    <title>Sin Restricciones</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAhh2JYaG7UV96OZ_nEzaRg1eY-eIKxzuM",
+      authDomain: "sin-restricciones.firebaseapp.com",
+      databaseURL: "https://sin-restricciones.firebaseio.com",
+      projectId: "sin-restricciones",
+      storageBucket: "sin-restricciones.appspot.com",
+      messagingSenderId: "180054496867"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -18,11 +33,11 @@
     <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"> <a href="#"><i class="fa fa-spoon"></i>&nbsp;SIN RESTRICIONES</a></li>
-                <li> <a href="#"><i class="fa fa-user-circle-o"></i>&nbsp; Perfil</a></li>
-                <li> <a href="#"><i class="fa fa-newspaper-o"></i>&nbsp; Muro</a></li>
-                <li> <a href="#"><i class="fa fa-cog"></i>&nbsp; Usuario</a></li>
-                <li> <a href="#"><i class="fa fa-heartbeat"></i>&nbsp; Salud &amp; Tips</a><a href="#"><i class="fa fa-sign-out"></i>&nbsp; Cerrar Sesión</a></li>
+                <li class="sidebar-brand"> <a href="#"><i class="fa fa-spoon"></i><span>SIN RESTRICIONES</span></a></li>
+                <li> <a href="#perfil.html"><i class="fa fa-user-circle-o"></i><span>Perfil</span></a></li>
+                <li> <a href="#muro.html"><i class="fa fa-newspaper-o"></i>Muro</a></li>
+                <li> <a href="#usuario.html"><i class="fa fa-cog"></i>Usuario</a></li>
+                <li> <a href="#Salud.html"><i class="fa fa-heartbeat"></i>Salud & Tips</a><a href="#"><i class="fa fa-sign-out"></i>&nbsp; Cerrar Sesión</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -34,43 +49,20 @@
             <div class="intro"></div>
         </div>
     </div>
-    <div class="profile-card" style="height:1296px;">
+    <div class="profile-card">
         <div class="profile-back"></div><img class="rounded-circle profile-pic" src="assets/img/pic_user.png">
         <h3 class="profile-name">Natalia Miranda Castillo</h3>
         <p class="profile-bio"><br>Soy Natalia , paciente, actualmente enfermera de la unidad de enfermedad inflamatoria intestinal del Hospital Sótero del Río, y secretario de la asociación EPAIM (Asociación de Crohn y Colitis Ulcerosa). Me gustaría que te tomaras unos minutos
             para conocer mi historia.<br></p>
-        <div class="card">
-            <div class="card-body" style="margin-left:-120px;"></div>
-                <h4 class="card-title">Información</h4>
-                <h6 class="text-muted card-subtitle mb-2">Nombre</h6>
-                <p class="card-text">Natalia Miranda Castillo</p>
-            
-            
-                <h6 class="text-muted card-subtitle mb-2">Fecha Nacimiento</h6>
-                <p class="card-text">12 de abril 1990</p>
-            
-            
-                <h6 class="text-muted card-subtitle mb-2">Ciudad</h6>
-                <p class="card-text">Santiago</p>
-           
-                <h6 class="text-muted card-subtitle mb-2">Telefóno</h6>
-                <p class="card-text">+56 923456789</p>
         
+            <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
 
-            
-                <h6 class="text-muted card-subtitle mb-2">Email</h6>
-                <p class="card-text">Natalia.miranda@gmail.com</p>
-         
-
-                <h6 class="text-muted card-subtitle mb-2">Hobbies</h6>
-                <p class="card-text">Trecking &amp; Triatlon</p>
-          
-
-           
-                <h6 class="text-muted card-subtitle mb-2">Intereses</h6>
-                <p class="card-text"> lugar de compras comida.</p>
-           
-        </div>
     </div>
 
         <ul class="social-list" style="margin-left:-120px;"> </ul>
