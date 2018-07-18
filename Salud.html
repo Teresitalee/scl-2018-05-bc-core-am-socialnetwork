@@ -2,16 +2,16 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sin Restricciones</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    <!-- Firebase Scripts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sin Restricciones</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -29,74 +29,106 @@
 </head>
 
 <body style="margin-bottom:30px;">
-    <div></div>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card"></div>
-                </div>
-            </div>
+  <div></div>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card"></div>
         </div>
+      </div>
     </div>
-    <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"> <a href="#"><i class="fa fa-dot-circle-o"></i>&nbsp;SIN RESTRICCIONES</a></li>
-                <li> <a href="perfil.html">&nbsp;<i class="fa fa-user-circle-o"></i>&nbsp; Perfil</a><a href="muro.html">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp; Muro</a><a href="salud.html">&nbsp;<i class="fa fa-heartbeat"></i>&nbsp;Salud &amp; Tips</a><a href="index.html">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;Cerrar Sesión</a></li>
-                <li>
-                </li>
-                <li> </li>
-            </ul>
-        </div>
-        <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
-                <div class="row">
-                    <div class="col-md-12"></div>
-                </div>
-            </div>
-        </div>
+  </div>
+  <div id="wrapper">
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            <i class="fa fa-dot-circle-o"></i>&nbsp;SIN RESTRICCIONES</a>
+        </li>
+        <li>
+          <a href="perfil.html">&nbsp;
+            <i class="fa fa-user-circle-o"></i>&nbsp; Perfil</a>
+          <a href="muro.html">&nbsp;
+            <i class="fa fa-newspaper-o"></i>&nbsp; Muro</a>
+          <a href="salud.html">&nbsp;
+            <i class="fa fa-heartbeat"></i>&nbsp;Salud &amp; Tips</a>
+          <a href="index.html">&nbsp;
+            <i class="fa fa-sign-out"></i>&nbsp;Cerrar Sesión</a>
+        </li>
+        <li>
+        </li>
+        <li> </li>
+      </ul>
     </div>
-    <div class="team-grid">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Recetas</h2>
-                <p class="text-center"><br>Alimentos Naturales para armar Recetas de cocina variada, sana, sabrosa, nutritiva, económica y con mucho color. Recetas comida natural para cuidar su salud. Recetas Naturistas Fáciles.&nbsp;</p>
-            </div>
-            <div class="row people">
-                <div class="col-md-6 col-lg-5 item" >
-                    <div class="box" style="background-image:url(assets/img/1.jpg)">
-                        <div class="cover">
-                            <h3 class="name">Leche de almendras</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5 item">
-                    <div class="box" style="background-image:url(assets/img/2.jpg)">
-                        <div class="cover">
-                            <h3 class="name">Sopa de lentejas</h3>
-                            <div class="social"><a href="#"></a><a href="#"></a><a href="#"></a></div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+    <div class="page-content-wrapper">
+      <div class="container-fluid">
+        <a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="row">
+          <div class="col-md-12"></div>
         </div>
+      </div>
     </div>
-    <footer id="myFooter" style="padding:0px;">
-        <div class="container-fluid">
-            <div class="row text-center">
-                <div class="col-12"></div>
-                <div class="col footer-social"><a href="#" class="social-icons"><i class="fa fa-facebook"></i></a><a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a><a href="#" class="social-icons"><i class="fa fa-twitter"></i></a><a href="#" class="social-icons"></a></div>
+  </div>
+  <div class="team-grid">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">Recetas</h2>
+        <p class="text-center">
+          <br>Alimentos Naturales para armar Recetas de cocina variada, sana, sabrosa, nutritiva, económica y con mucho color.
+          Recetas comida natural para cuidar su salud. Recetas Naturistas Fáciles.&nbsp;</p>
+      </div>
+      <div class="row people">
+        <div class="col-md-6 col-lg-5 item">
+          <div class="box" style="background-image:url(assets/img/1.jpg)">
+            <div class="cover">
+              <h3 class="name">Leche de almendras</h3>
             </div>
+          </div>
         </div>
-    </footer>
-    
- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+        <div class="col-md-6 col-lg-5 item">
+          <div class="box" style="background-image:url(assets/img/2.jpg)">
+            <div class="cover">
+              <h3 class="name">Sopa de lentejas</h3>
+              <div class="social">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="myFooter" style="padding:0px;">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12"></div>
+        <div class="col footer-social">
+          <a href="#" class="social-icons">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#" class="social-icons">
+            <i class="fa fa-google-plus"></i>
+          </a>
+          <a href="#" class="social-icons">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icons"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
