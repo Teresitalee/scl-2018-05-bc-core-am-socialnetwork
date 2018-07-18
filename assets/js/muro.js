@@ -36,18 +36,6 @@ function postUser() {
 
 }
 
-//Leer documentos
-let postArea = document.getElementById('postContainer'); // guardando datos
-db.collection("post").onSnapshot((querySnapshot) => { //onSnapShot agente escucha
-  postContainer.innerHTML = '';
 
-    querySnapshot.forEach((doc) => {
-      postArea.value = " "; 
-    postContainer.innerHTML += ` 
-    <div class = "row">
-    <div>${doc.data().usuario} </div> 
-    <div>${doc.data().texto}</div>
-  </div>`
-});
-});
 */
+}
