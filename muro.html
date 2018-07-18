@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="assets/css/homeStyle.css">
+     <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  
+  <script>
+    // Initialize Firebase
+  var config = {
+  apiKey: "AIzaSyAhh2JYaG7UV96OZ_nEzaRg1eY-eIKxzuM",
+  authDomain: "sin-restricciones.firebaseapp.com",
+  databaseURL: "https://sin-restricciones.firebaseio.com",
+  projectId: "sin-restricciones",
+  storageBucket: "sin-restricciones.appspot.com",
+  messagingSenderId: "180054496867"
+    };
+    firebase.initializeApp(config);
+</script>
+=======
     <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
@@ -26,6 +44,7 @@
     firebase.initializeApp(config);
   </script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+>>>>>>> upstream/master
 </head>
 
 <body>
@@ -41,9 +60,28 @@
         <div class="page-content-wrapper">
             <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="profile-card">
+                                        <div class="profile-back">
+                                        <div id="user-pic" class="demo-avatar">
+                                        <div class="demo-avatar-dropdown"></div>
+                                        <span id="user-name"></span>
+                                        <div class="mdl-layout-spacer">
+                                        </div>
+                                    
+                                </div> 
+                                    </div>
+                                
+                                    <!--  
                             <div class="profile-back"><img class="rounded-circle profile-pic" src="assets/img/pic_user.png"></div>
+                            <ul class="social-list"> -->
+                    
+                                 <ul class="social-list">
+                                     <li> </li>
+                                     <li> </li>
+                                     <li> </li>
+                                 </ul>
+                                   
                             <ul class="social-list">
                                 <li> </li>
                                 <li> </li>
@@ -72,16 +110,34 @@
             <div class="intro">
                 <h4 class="text-center">¿Qué estas pensando?</h4>
                 <p class="text-center"></p>
+<<<<<<< HEAD
             <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+=======
+<<<<<<< HEAD
+            <textarea class="txt" id="comment" rows="4" cols="60" placeholder="Ingresar texto"></textarea>
+=======
+            <textarea rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+>>>>>>> upstream/master
+>>>>>>> upstream/master
         </div>
             <div class="buttons">
                 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">amigos</button>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Público</a><a class="dropdown-item" role="presentation" href="#">Solo yo</a></div>
+<<<<<<< HEAD
                 </div><button class="btn btn-light" id="publishBtn" type="button">PUBLICAR</button></div>
         </div>
         <div class="container">
             <div class="intro" id="userMsg">
                 
+=======
+                </div><button class="btn btn-light" id="btn-publicar" type="button">PUBLICAR</button></div>
+        </div>
+        <div class="container">
+            <div class="intro">
+                <h4 class="text-center"></h4>
+                <p class="text-center"></p>
+            <textarea id="cont" rows="4" cols="60"></textarea>
+>>>>>>> upstream/master
         </div>
             <div class="buttons"><button class="btn btn-light" type="button">Editar</button><button class="btn btn-light" type="button">eliminar</button></div>
         </div>
@@ -105,9 +161,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+<<<<<<< HEAD
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/muro.js"></script>
+=======
     <script src="assets/js/index.js"></script>
     <script src="assets/js/main.js"></script>
+<<<<<<< HEAD
     <script src="assets/js/database.js"></script>
+=======
+>>>>>>> upstream/master
+>>>>>>> upstream/master
 </body>
 
 </html>
