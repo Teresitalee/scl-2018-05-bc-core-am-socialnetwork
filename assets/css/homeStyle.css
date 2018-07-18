@@ -16,10 +16,8 @@
 }
 
 #user-pic{
-	margin-left: 2em;
+  margin-left: 2em;
 }
-
-
 
 .demo-avatar-dropdown {
   display: -webkit-flex;
@@ -36,7 +34,7 @@
 }
 
 #user-name{
-	margin-top: 5em;
+  margin-top: 5em;
 }
 
 
