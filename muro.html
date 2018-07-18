@@ -36,22 +36,27 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
+
         <a href="#">
           <i class="fa fa-spoon"></i>&nbsp;SIN RESTRICCIONES</a>
+
+          <a href="#">
+            <i class="fa fa-power-off"></i><span>Sin Restricciones</span></a>
+
         </li>
         <li>
           <a href="perfil.html">
-            <i class="fa fa-user-circle-o"></i>Perfil</a>
+            <i class="fa fa-user-alt"></i><span>Perfil</span></a>
         </li>
         <li>
           <a href="muro.html">
-            <i class="fa fa-newspaper-o"></i>Muro</a>
+            <i class="fa fa-newspaper-o"></i><span>Muro</span></a>
         </li>
         <li>
           <a href="salud.html">
-            <i class="fa fa-heartbeat"></i>Salud & Tips</a>
+            <i class="fa fa-heartbeat"></i><span>Salud & Tips</span></a>
           <a href="index.html" id="logoutBtn">
-            <i class="fa fa-sign-out"></i>Cerrar Sesión</a>
+            <i class="fa fa-sign-out-alt"></i><span>Cerrar Sesión</span></a>
         </li>
       </ul>
     </div>
@@ -63,17 +68,12 @@
         <div class="row">
           <div class="col-12">
             <div class="profile-card">
-              <div class="profile-back">
+              <div class="profile-back mx-auto d-block">
                 <div id="user-pic" class="demo-avatar">
                   <div class="demo-avatar-dropdown"></div>
-                  <span id="user-name"></span>
-                  <div class="mdl-layout-spacer">
-                  </div>
                 </div>
+                <span id="user-name" class="mt-4" style="width: 30em"></span>
               </div>
-<!--  
-              <div class="profile-back"><img class="rounded-circle profile-pic" src="assets/img/pic_user.png"></div>
-                <ul class="social-list">-->
             </div>
           </div>
         </div>
@@ -87,8 +87,24 @@
         <p class="text-center"></p>
 
         <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+      </div>
+      <footer>
+        <div class="clearfix">
+            <ul class="post-links mt-md pull-center ">
+                <li><a href="#">1 hour</a>
+                </li>
+                <li><a href="#"><span class="text-primary"><i class="fa fa-thumbs-up"></i>Me gusta</span></a>
 
-      
+                </li>
+                <li><a href="#"><span class="text-primary"><i class="fa fa-retweet"></i> Compartir</span></a>
+
+                </li>
+                
+            </ul>
+        </div> 
+        </footer>     
+                   
+
 
     <div class="fb-like" 
     data-href="https://www.your-domain.com/your-page.html" 
@@ -97,7 +113,7 @@
     data-show-faces="true">
   </div>
 
-      </div>
+
       <div class="buttons">
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">amigos</button>
@@ -112,12 +128,8 @@
     <!-- Container messages -->
     <div class="container">
       <div class="intro" id="userMsg">
-
       </div>
-      <div class="buttons">
-        <button class="btn btn-light" type="button">Editar</button>
-        <button class="btn btn-light" type="button">eliminar</button>
-      </div>
+      
     </div>
   </div>
   <div>

@@ -1,3 +1,12 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
 
 /* avatar Google */
 
@@ -10,16 +19,8 @@
 	height: 60px;
 	margin-top: 1em;
   background-size: 60px;
-	border-radius: 20px;
-	margin-bottom: 10em;
-	
+	border-radius: 20px;	
 }
-
-#user-pic{
-	margin-left: 2em;
-}
-
-
 
 .demo-avatar-dropdown {
   display: -webkit-flex;
@@ -35,15 +36,21 @@
   width: 100%;
 }
 
-#user-name{
-	margin-top: 5em;
-}
-
 #icon-post{
   display: inline;
 }
 
+#userName {
+  font-size-adjust: inherit;
+}
 
-
+.boxMsg {
+  border-radius: 0.4em;
+  margin: 5% auto;
+  background-color: rgb(51, 153, 204, 0.1);
+  text-align: left;
+  margin-bottom: 6em;
+  padding: 0 16%;
+}
 
 
