@@ -55,6 +55,7 @@
             </div>
         </div>
     </div>
+    <!--
     <div></div>
     <div>
         <div class="container">
@@ -65,23 +66,22 @@
             </div>
         </div>
     </div>
+    -->
     <div class="highlight-clean">
         <div class="container">
             <div class="intro">
                 <h4 class="text-center">¿Qué estas pensando?</h4>
                 <p class="text-center"></p>
-            <textarea rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+            <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
         </div>
             <div class="buttons">
                 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">amigos</button>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Público</a><a class="dropdown-item" role="presentation" href="#">Solo yo</a></div>
-                </div><button class="btn btn-light" type="button">PUBLICAR</button></div>
+                </div><button class="btn btn-light" id="publishBtn" type="button">PUBLICAR</button></div>
         </div>
         <div class="container">
-            <div class="intro">
-                <h4 class="text-center"></h4>
-                <p class="text-center"></p>
-            <textarea rows="4" cols="60"></textarea>
+            <div class="intro" id="userMsg">
+                
         </div>
             <div class="buttons"><button class="btn btn-light" type="button">Editar</button><button class="btn btn-light" type="button">eliminar</button></div>
         </div>
@@ -98,7 +98,7 @@
             <div class="row text-center">
                 <div class="col footer-social"><a href="#" class="social-icons"><i class="fa fa-facebook"></i></a><a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a><a href="#" class="social-icons"><i class="fa fa-twitter"></i></a><a href="#" class="social-icons"></a></div>
             </div>
-        
+        </div>
     </footer>
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -107,6 +107,7 @@
     <script src="assets/js/script.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/database.js"></script>
 </body>
 
 </html>
