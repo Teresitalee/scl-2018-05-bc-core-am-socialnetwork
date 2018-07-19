@@ -86,16 +86,35 @@ body {
 
 
  /* botones post publicar y privacidad */
- .btn-publish{
-  display: inline-flex;
-  margin-left: 30em;
-}
+ 
 
 #publishBtn{
-  color: #7ba83f;
+  background-color: #18e47e;
+  color: #ffffff;
+  padding: 17px;
+ margin-bottom: 2em;
 }
 
 #publishBtn:hover{
-  color: rgb(240, 243, 255);
+  background-color: #7febd0;
+  display: inline;
+  
+}
 
+#btn-friends{
+  background-color: #18e47e;
+  display: inline;
+  padding: 17px;
+}
+
+#btn-friends:hover{
+  background-color: #7febd0;
+  display: inline;
+  
+}
+
+.buttons-Post{
+  display: blo;
+  margin-left: 20em;
+  
 }
