@@ -122,29 +122,6 @@ const settings = { /* your settings... */
   timestampsInSnapshots: true
 };
 firestore.settings(settings);
-/* SE COMENTA PORQUE NO ES NECESARIO
-//Agregar usuario a DB
-function saveToDB() {
-  const db = firebase.firestore();
-  let name = document.getElementById('userName').value;
-  let email = document.getElementById('userEmail').value;
-
-  db.collection("users").add({
-      id: uid,
-      name: name,
-      email: email,
-    })
-    .then(function (docRef) {
-      console.log("Document written with ID: ", docRef.uid);
-      document.getElementById('userName').value = '';
-      document.getElementById('userEmail').value = '';
-    })
-    .catch(function (error) {
-      console.log('Error de Firebase: ' + error.code);
-      console.log('Mensaje de error de Firebase: ' + error.message);
-    });
-}
-*/
 //Contador de likes y guardarlo a DB
 function saveLikeToDB(){
   const db = firebase.firestore();

@@ -31,20 +31,7 @@ function publishMessageInDb() {
   }
 
 }
-/*
-// Leer mensajes desde DB
-let userPosts = userMsg;
-//let userPostsRef = db.doc(`messages/${}`)
-db.collection("messages").doc()
-  .onSnapshot((doc) => {
-    console.log("Current data: ", doc.data().text);
-    userPosts.innerHTML += `
-    <h4 class="text-center">${doc.id}</h4>
-    <p class="text-center">${doc.data().creator}</p>
-    <textarea rows="4" cols="60" >${doc.data().text}</textarea>
-    `;
-  });
-*/
+
 db.collection("messages").onSnapshot((querySnapshot) => {
   let userPosts = userMsg;
   //Limpia y borra los post del textTarea
