@@ -43,20 +43,15 @@ db.collection("messages").onSnapshot((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().text}`);
     userPosts.innerHTML += `
-
-    <div>
-    <h4 class="text-center">${doc.id}</h4>
-    <p class="text-center">${doc.data().creator}</p>
-    <textarea rows="4" cols="60" >${doc.data().text}</textarea>
-    <button class="btn-edit" onclick="editar('${doc.id}')"><i class="fas fa-edit"></i></button>
-    <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-trash"><i class="fas fa-trash-alt"></i></button>
-
     <div class="boxMsg">
     <h4 class="text-center">${doc.id}</h4>
     <p class="text-center">${doc.data().creator}</p>
     <p>${doc.data().text}</p>
-    <button class="btn-post"><i class="fas fa-edit"></i></button>
-    <button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>
+    <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button>
+    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit"></i></button>
+    <button class="btn-like" ('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat"></i></button>
+    </div>
+
 
     `;
   });
@@ -75,15 +70,16 @@ function eliminar(id) {
 }
 
 
-//FUnción editar mensaje
+//Funcion editar
 function editar(id,userText) {
   document.getElementById('userInput').value = userText;
 
   let boton = document.getElementById('publishBtn');
   boton.innerHTML = 'Editar';
+
   //ejecutar funcion boton editar
   boton.onclick = function () {
-    let washingtonRef = db.collection("messages").doc(id);
+    let washingtonRef = db.collection("users").doc(id);
     //cambiar y editar el mensaje del usuario, y guardadas en variables
     let messagePost = document.getElementById('userInput').value;
   
@@ -91,10 +87,11 @@ function editar(id,userText) {
       creator: currentUser.uid,
       text: userText,
       date: new Date()
+      
     })
       .then(function () {
         console.log("Document successfully updated!");
-        boton.innerHTML = 'Guardar';
+        boton.innerHTML = 'Publicar';
         document.getElementById('messages').value = '';
         
       })
@@ -102,8 +99,6 @@ function editar(id,userText) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
-
   }
-
 
 }
