@@ -11,11 +11,13 @@ function publishMessageInDb() {
     alert('Debes ingresar un texto para poder compartir');
   } else {
     let currentUser = firebase.auth().currentUser.uid;
+    let currentUserName = firebase.auth().currentUser.displayName;
     let userText = userInput.value;
     let time = new Date().getTime();
     let date = new Date(time).toLocaleString();
     db.collection('messages').add({
-        creator: currentUser.displayName,
+        creator: currentUser,
+        userName: currentUserName,
         text: userText,
         date: date
       })
@@ -29,20 +31,7 @@ function publishMessageInDb() {
   }
 
 }
-/*
-// Leer mensajes desde DB
-let userPosts = userMsg;
-//let userPostsRef = db.doc(`messages/${}`)
-db.collection("messages").doc()
-  .onSnapshot((doc) => {
-    console.log("Current data: ", doc.data().text);
-    userPosts.innerHTML += `
-    <h4 class="text-center">${doc.id}</h4>
-    <p class="text-center">${doc.data().creator}</p>
-    <textarea rows="4" cols="60" >${doc.data().text}</textarea>
-    `;
-  });
-*/
+
 db.collection("messages").onSnapshot((querySnapshot) => {
   let userPosts = userMsg;
   //Limpia y borra los post del textTarea
