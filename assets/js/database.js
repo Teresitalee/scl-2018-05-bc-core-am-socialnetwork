@@ -7,22 +7,28 @@ document.getElementById('publishBtn').addEventListener('click', () => {
 });
 
 function publishMessageInDb() {
-  let currentUser = firebase.auth().currentUser.uid;
-  let currentUserName = firebase.auth().currentUser.displayName;
-  let userText = userInput.value;
-  db.collection('messages').add({
-    creator: currentUser,
-    userName: currentUserName,
-    text: userText,
-    date: new Date()
-  })
-  .then((docRef) => {
-    console.log("Document written with ID: ", docRef.id);
-    userInput.value = '';
-  })
-  .catch((error) => {
-    console.error("Error adding document: ", error);
-  });
+  if (userInput.value == '') {
+    alert('Debes ingresar un texto para poder compartir');
+  } else {
+    let currentUser = firebase.auth().currentUser.uid;
+    let userName = firebase.auth().currentUser.displayName;
+    let userText = userInput.value;
+    let time = new Date().getTime();
+    let date = new Date(time).toLocaleString();
+    db.collection('messages').add({
+        creator: currentUser,
+        userName: userName,
+        text: userText,
+        date: date
+      })
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        userInput.value = '';
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+  }
 }
 
 db.collection("messages").onSnapshot((querySnapshot) => {
@@ -33,6 +39,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     console.log(`${doc.id} => ${doc.data().text}`);
     userPosts.innerHTML += `
     <div class="boxMsg">
+    <p class="text-center">${doc.data().date}</p>
     <h4 class="text-center">${doc.id}</h4>
     <p class="text-center">${doc.data().creator}</p>
     <p>${doc.data().text}</p>
@@ -42,91 +49,56 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <button class="btn-like" ('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
-    
+
   });
 });
 
-/*<h4 class="text-center">${doc.data().creator}</h4>
-    <p class="text-center">${doc.data().userName}</p>
-    <span id="${doc.id}">${doc.data().text}</span>
-    <p class="text-center">${doc.data().date}</p>
-    <button class="btn-edit" onclick="editar('${doc.id}','${doc.data().creator}','${doc.data().userName}','${doc.data().text}','${doc.data().date}')"><i class="fas fa-edit"></i></button>
-    <button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>*/
-
 //Funcion eliminar post
 function eliminar(id) {
-
-  db.collection("messages").doc(id).delete().then(function () {
-    console.log("Document successfully deleted!");
-
-  }).catch(function (error) {
-    console.error("Error removing document: ", error);
-  });
+  let validation = prompt('Estás segur@ de eliminar? (SI/NO)').toLowerCase();
+  if(validation == "si") {
+    db.collection("messages").doc(id).delete()
+    .then(function () {
+      console.log("Document successfully deleted!");
+    }).catch(function (error) {
+      console.error("Error removing document: ", error);
+    });
+  }  
 }
 
-//FUnción editar mensaje
-function editar(id,creator,text,date) {
-  let oldText = document.getElementById(id);
-  console.log(oldText);
-  // cambiar nombre a boton
+//Funcion editar
+function editar(id, userText, Date) {
+  document.getElementById('userInput').value = userText;
+
   let boton = document.getElementById('publishBtn');
   boton.innerHTML = 'Editar';
+
   //ejecutar funcion boton editar
-  boton.onclick = () => {
-    let postRef = db.collection("messages").doc(id);
+  boton.onclick = function () {
+    let currentUser = firebase.auth().currentUser.uid;
+    let messagePost = document.getElementById('userInput').value;
+    let messageRef = db.collection("messages").doc(id);
     //cambiar y editar el mensaje del usuario, y guardadas en variables
-    let userText = document.getElementById('userInput');
-  
-    return postRef.update({
+    console.log(`usuario actual: ${currentUser}, mensaje de usuario ${messagePost}, referencia ${messageRef}`);
+    return messageRef.update({
       creator: currentUser.uid,
-      text: userText,
+      text: messagePost,
       date: new Date()
     })
-      .then(function () {
-        console.log("Document successfully updated!");
-        boton.innerHTML = 'Guardar';
-        document.getElementById('messages').value = '';
-        
-      })
-      .catch(function (error) {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-      });
+    .then(function () {
+      console.log("Document successfully updated!");
+      boton.innerHTML = 'Publicar';
+      document.getElementById('messages').value = '';
 
+    })
+    .catch(function (error) {
+      // The document probably doesn't exist.
+      console.error("Error updating document: ", error);
+    });
   };
+
 }
 
-/*
-function editar(id,currentUser,currentUserName,userText,date) {
-  let postRef = db.collection("messages").doc(id);
+function editar(id, userText, Date) {
 
-  let oldText = document.getElementById(id);
-  console.log(oldText);
-  // cambiar nombre a boton
-  let boton = document.getElementById('publishBtn');
-  boton.innerHTML = 'Editar';
-
-  //ejecutar funcion boton editar
-  boton.onclick = () => {
-    //cambiar y editar el mensaje del usuario, y guardadas en variables
-    let userText = document.getElementById('userInput');
-  
-    return postRef.update({
-      creator: currentUser.uid,
-      text: userText,
-      date: new Date()
-      
-    })
-      .then(function () {
-        console.log("Document successfully updated!");
-        boton.innerHTML = 'Publicar';
-        document.getElementById('messages').value = '';
-        
-      })
-      .catch(function (error) {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-      });
-  }
 }
-*/
