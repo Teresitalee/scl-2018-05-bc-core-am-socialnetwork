@@ -49,19 +49,16 @@ db.collection("messages").onSnapshot((querySnapshot) => {
 // guardar los conteos de likes
 var count = 0;
 
-function like(){
+function count(){
   contador++;
   console.log('El contador es:' + contador);
 }
-
-
-
 
 function countLikeInDb() {
   let currentUser = firebase.auth().currentUser.uid;
   let currentUserName = firebase.auth().currentUser.displayName;
   let userText = userInput.value;
-  db.collection('muro').add({
+  db.collection('messages').add({
     feelings: currentUser,
     post: currentUserName,
     users: userText,
