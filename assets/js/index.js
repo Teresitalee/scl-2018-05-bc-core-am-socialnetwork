@@ -1,18 +1,22 @@
-// Avatar y nombre RRSS
+
+
 var userPic = document.getElementById('user-pic');
 var userName = document.getElementById('user-name');
 
 function inicializarFire() {
-  firebase.auth().onAuthStateChanged(function (user) {
+  firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       let userDisplayName = user.displayName;
       let userPhoto = user.photoURL;
+      goToWall();
       userName.textContent = userDisplayName;
       userPic.style.backgroundImage = 'url(' + userPhoto + ')';
+    } else {
+      goToIndex();
     }
   });
 }
-window.onload = function () {
+window.onload = function() {
   inicializarFire();
 };
 
@@ -118,15 +122,37 @@ const settings = { /* your settings... */
   timestampsInSnapshots: true
 };
 firestore.settings(settings);
-
 //Contador de likes y guardarlo a DB
-function saveLikeToDB() {
+function saveLikeToDB(){
   const db = firebase.firestore();
   let likes = document.getElementById('like-post').value;
 
-  var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-  starCountRef.on('value', function (snapshot) {
-    updateStarCount(postElement, snapshot.val());
-  });
+var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
+starCountRef.on('value', function(snapshot) {
+  updateStarCount(postElement, snapshot.val());
+});
+ 
 }
 
+ 
+// Avatar y nombre GOOGLE
+
+var userPic = document.getElementById('user-pic');
+var userName = document.getElementById('user-name');
+
+function InicializarFire() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    /* body... */
+
+    if (user) {
+      let userDisplayName = user.displayName;
+      let userPhoto = user.photoURL;
+
+      userName.textContent = userDisplayName;
+      userPic.style.backgroundImage = 'url(' + userPhoto + ')';
+    }
+  });
+}
+window.onload = function() {
+  InicializarFire();
+};
