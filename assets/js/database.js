@@ -11,13 +11,11 @@ function publishMessageInDb() {
     alert('Debes ingresar un texto para poder compartir');
   } else {
     let currentUser = firebase.auth().currentUser.uid;
-    let userName = firebase.auth().currentUser.displayName;
     let userText = userInput.value;
     let time = new Date().getTime();
     let date = new Date(time).toLocaleString();
     db.collection('messages').add({
-        creator: currentUser,
-        userName: userName,
+        creator: currentUser.displayName,
         text: userText,
         date: date
       })
@@ -29,12 +27,26 @@ function publishMessageInDb() {
         console.error("Error adding document: ", error);
       });
   }
-}
 
+}
+/*
+// Leer mensajes desde DB
+let userPosts = userMsg;
+//let userPostsRef = db.doc(`messages/${}`)
+db.collection("messages").doc()
+  .onSnapshot((doc) => {
+    console.log("Current data: ", doc.data().text);
+    userPosts.innerHTML += `
+    <h4 class="text-center">${doc.id}</h4>
+    <p class="text-center">${doc.data().creator}</p>
+    <textarea rows="4" cols="60" >${doc.data().text}</textarea>
+    `;
+  });
+*/
 db.collection("messages").onSnapshot((querySnapshot) => {
   let userPosts = userMsg;
   //Limpia y borra los post del textTarea
-  //userPosts.innerHTML = '';
+  userPosts.innerHTML = '';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().text}`);
     userPosts.innerHTML += `
@@ -45,7 +57,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <p>${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
-    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
+    <button class="btn-edit" onclick="editar('${doc.creator}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
     <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
@@ -128,4 +140,5 @@ function countLikeInDb() {
     .catch((error) => {
       console.error("Error adding document: ", error);
     });
+
 }

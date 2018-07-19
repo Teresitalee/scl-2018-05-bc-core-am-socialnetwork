@@ -122,3 +122,4 @@ function saveLikeToDB() {
     updateStarCount(postElement, snapshot.val());
   });
 }
+
