@@ -42,6 +42,7 @@ body {
 
 #userName {
   font-size-adjust: inherit;
+  margin-top: 5em;
 }
 
 .boxMsg {
@@ -53,9 +54,49 @@ body {
   padding: 0 16%;
 }
 
-
-.icon-btn{
-  margin-left: -5em;
- 
+/* Diseño y estilo a iconos post */
+.icon{
+  
+  display: inline;
+  margin-left: 8em;
+  
 }
 
+.iconPost{
+  color:#7ba83f;
+ 
+  }
+  .iconPost:hover {
+      color: #005d2f;
+      cursor: pointer;
+  }
+
+  .btn-delete{
+    background-color: rgb(238, 227, 214);
+    border-radius: 20px;
+  }
+
+  .btn-edit{
+    background-color: rgb(238, 227, 214);
+    border-radius: 20px;
+  }
+  .btn-like{
+    background-color: rgb(238, 227, 214);
+    border-radius: 20px;
+  }
+
+
+ /* botones post publicar y privacidad */
+ .btn-publish{
+  display: inline-flex;
+  margin-left: 30em;
+}
+
+#publishBtn{
+  color: #7ba83f;
+}
+
+#publishBtn:hover{
+  color: rgb(240, 243, 255);
+
+}

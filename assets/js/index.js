@@ -15,9 +15,11 @@ function inicializarFire() {
     if (user) {
       let userDisplayName = user.displayName;
       let userPhoto = user.photoURL;
-
+      goToWall();
       userName.textContent = userDisplayName;
       userPic.style.backgroundImage = 'url(' + userPhoto + ')';
+    } else {
+      goToIndex();
     }
   });
 }
@@ -127,7 +129,7 @@ const settings = { /* your settings... */
   timestampsInSnapshots: true
 };
 firestore.settings(settings);
-
+/* SE COMENTA PORQUE NO ES NECESARIO
 //Agregar usuario a DB
 function saveToDB() {
   const db = firebase.firestore();
@@ -149,7 +151,7 @@ function saveToDB() {
       console.log('Mensaje de error de Firebase: ' + error.message);
     });
 }
-
+*/
 //Contador de likes y guardarlo a DB
 function saveLikeToDB(){
   const db = firebase.firestore();

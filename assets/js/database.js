@@ -36,11 +36,13 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <h4 class="text-center">${doc.id}</h4>
     <p class="text-center">${doc.data().creator}</p>
     <p>${doc.data().text}</p>
-    <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button>
-    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit"></i></button>
-    <button class="btn-like" ('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat"></i></button>
+    <div class="icon">
+    <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
+    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
+    <button class="btn-like" ('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
+    
   });
 });
 
