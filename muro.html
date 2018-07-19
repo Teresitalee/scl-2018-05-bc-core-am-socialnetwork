@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="assets/css/styles.min.css">
   <link rel="stylesheet" href="assets/css/homeStyle.css">
   <!-- iconos -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+    crossorigin="anonymous">
   <!-- Firebase Scripts -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
@@ -27,31 +28,42 @@
       messagingSenderId: "180054496867"
     };
     firebase.initializeApp(config);
-</script>
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </head>
 
 <body>
+  <div></div>
   <div id="wrapper">
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
           <a href="#">
-            <i class="fa fa-power-off"></i><span>Sin Restricciones</span></a>
+            <i class="fa fa-power-off"></i>
+            <span>Sin Restricciones</span>
+          </a>
         </li>
         <li>
           <a href="perfil.html">
-            <i class="fa fa-user-alt"></i><span>Perfil</span></a>
+            <i class="fa fa-user-alt"></i>
+            <span>Perfil</span>
+          </a>
         </li>
         <li>
           <a href="muro.html">
-            <i class="fa fa-newspaper-o"></i><span>Muro</span></a>
+            <i class="fa fa-newspaper-o"></i>
+            <span>Muro</span>
+          </a>
         </li>
         <li>
           <a href="salud.html">
-            <i class="fa fa-heartbeat"></i><span>Salud & Tips</span></a>
+            <i class="fa fa-heartbeat"></i>
+            <span>Salud & Tips</span>
+          </a>
           <a href="index.html" id="logoutBtn">
-            <i class="fa fa-sign-out-alt"></i><span>Cerrar Sesión</span></a>
+            <i class="fa fa-sign-out-alt"></i>
+            <span>Cerrar Sesión</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -71,7 +83,7 @@
                   </div>
                 </div>
               </div>
-<!--  
+              <!--  
               <div class="profile-back"><img class="rounded-circle profile-pic" src="assets/img/pic_user.png"></div>
                 <ul class="social-list">-->
             </div>
@@ -87,32 +99,14 @@
         <p class="text-center"></p>
 
         <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
-      
+
       </div>
-      <footer>
-        <div class="clearfix">
-            <ul class="post-links mt-md pull-center " id="like-post">
-                <li><a href="#">1 hour</a>
-                </li>
-                <li><a href="#" onclick="clic()"><span class="text-primary"><i class="fa fa-thumbs-up"></i>Me gusta</span></a>
-
-                </li>
-                <li><a href="#"><span class="text-primary"><i class="fa fa-retweet"></i> Compartir</span></a>
-
-                </li>
-                
-            </ul>
-        </div> 
-        </footer>     
-                   
+      
 
 
-    <div class="fb-like" 
-    data-href="https://www.your-domain.com/your-page.html" 
-    data-layout="standard" 
-    data-action="like" 
-    data-show-faces="true">
-  </div>
+
+      <div class="fb-like" id="like" data-href="https://www.your-domain.com/your-page.html" data-layout="standard" data-action="like" data-show-faces="true">
+      </div>
 
 
       <div class="buttons">
@@ -123,7 +117,7 @@
             <a class="dropdown-item" role="presentation" href="#">Solo yo</a>
           </div>
         </div>
-        <button class="btn btn-light" onclick="publish()" id="publishBtn" type="button">Publicar</button>
+        <button class="btn btn-light" id="publishBtn" type="button">PUBLICAR</button>
       </div>
     </div>
     <!-- Container messages -->

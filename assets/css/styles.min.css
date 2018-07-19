@@ -846,7 +846,7 @@ a.article:hover {
   position: absolute;
   margin-right: -250px
 }
-/*
+
 @media (min-width:768px) {
   #wrapper.toggled {
     padding-left: 0
@@ -863,7 +863,7 @@ a.article:hover {
     margin-right: 0
   }
 }
-*/
+
 
 #wrapper {
   padding-left: 0;
@@ -927,7 +927,7 @@ a.article:hover {
   background: 0 0
 }
 
-/*
+
 @media (min-width:768px) {
   #wrapper {
     padding-left: 250px
@@ -936,7 +936,7 @@ a.article:hover {
     width: 250px
   }
 }
-*/
+
 .container-main .row {
   padding: 0;
   margin: 0
