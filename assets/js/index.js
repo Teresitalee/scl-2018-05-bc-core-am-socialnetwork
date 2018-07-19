@@ -112,6 +112,13 @@ function logOut() {
     });
 }
 
+// Inicializando Base de Datos
+const firestore = firebase.firestore();
+const settings = { /* your settings... */
+  timestampsInSnapshots: true
+};
+firestore.settings(settings);
+
 //Contador de likes y guardarlo a DB
 function saveLikeToDB() {
   const db = firebase.firestore();
