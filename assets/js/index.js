@@ -63,7 +63,7 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado correctamente');
-      //window.open('../muro.html', '_self', 'true');
+      window.open('../muro.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error de Firebase: ' + error.code);
