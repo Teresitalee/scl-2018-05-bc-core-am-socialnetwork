@@ -7,12 +7,12 @@ document.getElementById('publishBtn').addEventListener('click', () => {
 });
 
 function publishMessageInDb() {
-  let currentUser = firebase.auth().currentUser.uid;
-  let currentUserName = firebase.auth().currentUser.displayName;
+  let currentUser = firebase.auth().currentUser;
+ 
   let userText = userInput.value;
   db.collection('messages').add({
-    creator: currentUser,
-    userName: currentUserName,
+    creator: currentUser.displayName,
+    
     text: userText,
     date: new Date()
   })
@@ -39,7 +39,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
     <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
+    <button class="btn-like" onclick="count(${doc.id})" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
     
@@ -49,7 +49,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
 // guardar los conteos de likes
 var count = 0;
 
-function count(){
+function count(doc.id){
   contador++;
   console.log('El contador es:' + contador);
 }

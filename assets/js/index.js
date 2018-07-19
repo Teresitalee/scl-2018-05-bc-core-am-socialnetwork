@@ -157,9 +157,9 @@ function saveLikeToDB(){
   const db = firebase.firestore();
   let likes = document.getElementById('like-post').value;
 
-var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-starCountRef.on('value', function(snapshot) {
-  updateStarCount(postElement, snapshot.val());
+var heartCountRef = firebase.database().ref('id/' + text + creator +'/icon-like');
+heartCountRef.on('value', function(snapshot) {
+  updateHeartCount(postElement, snapshot.val());
 });
  
 }
