@@ -85,7 +85,7 @@ function editar(id,creator,text,date) {
         console.error("Error updating document: ", error);
       });
 
-  }
+  };
 }
 
 /*
