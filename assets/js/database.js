@@ -10,16 +10,14 @@ function publishMessageInDb() {
   if (userInput.value == '') {
     alert('Debes ingresar un texto para poder compartir');
   } else {
-    let currentUser = firebase.auth().currentUser.uid;
-    let currentUserName = firebase.auth().currentUser.displayName;
-    let userText = userInput.value;
+    const currentUser = firebase.auth().currentUser;
     let time = new Date().getTime();
     let date = new Date(time).toLocaleString();
+    let userText = userInput.value;
     db.collection('messages').add({
-        creator: currentUser,
-        userName: currentUserName,
-        text: userText,
-        date: date
+    creator: currentUser.displayName,
+    text: userText,
+    date: date
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -41,8 +39,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     userPosts.innerHTML += `
     <div class="boxMsg">
     <p class="text-center">${doc.data().date}</p>
-    <h4 class="text-center">${doc.id}</h4>
-    <p class="text-center">${doc.data().creator}</p>
+    <h4 class="text-center">${doc.data().creator}</h4>
     <p>${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
@@ -104,12 +101,7 @@ function saveLikeToDB() {
 
 }
   
-// Inicializando Base de Datos
-const firestore = firebase.firestore();
-const settings = { /* your settings... */
-  timestampsInSnapshots: true
-};
-firestore.settings(settings);
+
 
 // guardar los conteos de likes
 var count = 0;
