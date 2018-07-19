@@ -162,7 +162,7 @@ starCountRef.on('value', function(snapshot) {
  
 }
 
-
+ 
 // Avatar y nombre GOOGLE
 
 var userPic = document.getElementById('user-pic');
