@@ -1,4 +1,6 @@
-// Initialize Cloud Firestore through Firebase
+// Initialize Cloud Firestore through Firebase}
+
+
 const db = firebase.firestore();
 
 // Subir mensajes a DB
@@ -11,11 +13,13 @@ function publishMessageInDb() {
     alert('Debes ingresar un texto para poder compartir');
   } else {
     let currentUser = firebase.auth().currentUser.uid;
+    let currentUserName = firebase.auth().currentUser.displayName;
     let userText = userInput.value;
     let time = new Date().getTime();
     let date = new Date(time).toLocaleString();
     db.collection('messages').add({
-        creator: currentUser.displayName,
+        creator: currentUser,
+        userName: currentUserName,
         text: userText,
         date: date
       })
@@ -102,6 +106,13 @@ function editar(creator, userText) {
       });
   };
 }
+// Inicializando Base de Datos
+const firestore = firebase.firestore();
+const settings = { /* your settings... */
+  timestampsInSnapshots: true
+};
+firestore.settings(settings);
+
 
 //Contador de likes y guardarlo a DB
 function saveLikeToDB() {
