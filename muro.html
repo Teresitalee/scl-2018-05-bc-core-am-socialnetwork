@@ -75,12 +75,17 @@
         <div class="row">
           <div class="col-12">
             <div class="profile-card">
-              <div class="profile-back mx-auto d-block">
+              <div class="profile-back">
                 <div id="user-pic" class="demo-avatar">
                   <div class="demo-avatar-dropdown"></div>
+                  <span id="user-name"></span>
+                  <div class="mdl-layout-spacer">
+                  </div>
                 </div>
-                <span id="user-name" class="mt-4" style="width: 30em"></span>
               </div>
+<!--  
+              <div class="profile-back"><img class="rounded-circle profile-pic" src="assets/img/pic_user.png"></div>
+                <ul class="social-list">-->
             </div>
           </div>
         </div>
@@ -94,6 +99,7 @@
         <p class="text-center"></p>
 
         <textarea id="userInput" rows="4" cols="60" placeholder="Ingresa tu texto aquí"></textarea>
+      
       </div>
       <footer>
         <div class="clearfix">
@@ -135,8 +141,12 @@
     <!-- Container messages -->
     <div class="container">
       <div class="intro" id="userMsg">
-      </div>
 
+      </div>
+      <div class="buttons">
+        <button class="btn btn-light" type="button">Editar</button>
+        <button class="btn btn-light" type="button">eliminar</button>
+      </div>
     </div>
   </div>
   <div>

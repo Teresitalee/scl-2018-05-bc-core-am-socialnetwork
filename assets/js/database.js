@@ -34,16 +34,22 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     userPosts.innerHTML += `
     <div class="boxMsg">
     <h4 class="text-center">${doc.id}</h4>
-    <h4 class="text-center">${doc.data().creator}</h4>
-    <p class="text-center">${doc.data().userName}</p>
-    <span id="${doc.id}">${doc.data().text}</span>
-    <p class="text-center">${doc.data().date}</p>
-    <button class="btn-edit" onclick="editar('${doc.id}','${doc.data().creator}','${doc.data().userName}','${doc.data().text}','${doc.data().date}')"><i class="fas fa-edit"></i></button>
-    <button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>
+    <p class="text-center">${doc.data().creator}</p>
+    <p>${doc.data().text}</p>
+    <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button>
+    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit"></i></button>
+    <button class="btn-like" ('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat"></i></button>
+    </div>
     `;
   });
 });
 
+/*<h4 class="text-center">${doc.data().creator}</h4>
+    <p class="text-center">${doc.data().userName}</p>
+    <span id="${doc.id}">${doc.data().text}</span>
+    <p class="text-center">${doc.data().date}</p>
+    <button class="btn-edit" onclick="editar('${doc.id}','${doc.data().creator}','${doc.data().userName}','${doc.data().text}','${doc.data().date}')"><i class="fas fa-edit"></i></button>
+    <button class="btn-post" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt"></i></button></div>*/
 
 //Funcion eliminar post
 function eliminar(id) {
@@ -97,6 +103,7 @@ function editar(id,currentUser,currentUserName,userText,date) {
   // cambiar nombre a boton
   let boton = document.getElementById('publishBtn');
   boton.innerHTML = 'Editar';
+
   //ejecutar funcion boton editar
   boton.onclick = () => {
     //cambiar y editar el mensaje del usuario, y guardadas en variables
@@ -106,10 +113,11 @@ function editar(id,currentUser,currentUserName,userText,date) {
       creator: currentUser.uid,
       text: userText,
       date: new Date()
+      
     })
       .then(function () {
         console.log("Document successfully updated!");
-        boton.innerHTML = 'Guardar';
+        boton.innerHTML = 'Publicar';
         document.getElementById('messages').value = '';
         
       })
@@ -117,9 +125,6 @@ function editar(id,currentUser,currentUserName,userText,date) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
-
   }
-
-
 }
 */
