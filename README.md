@@ -8,23 +8,27 @@ Nuestra idea nace desde la necesidad de contar con una red social que conecte pe
 
 Por ello estamos desarrollando **SIN RESTRICCIONES**, una red social en la cual podrán contactarse con personas con sus mismas problemáticas y encontrar consejos y datos útiles, además de ayudarse mutuamente. Nuestros usuarios son un público principalmente adulto, activo en redes sociales en general y que tengan alguna enfermedad que les requiera hacer modificaciones a su dieta habitual. También pueden formar parte sus cuidadores o familiares de todas las edades que deseen interiorizarse en el tema, para así crear una comunidad abierta, que pueda compartir tips, datos y dietas que los ayudan a llevar una mejor calidad de vida.
 
+### Diseño de Interfaz de Usuario
 
-### **Diseño de Interfaz de Usuario**
+Realizamos un sketch en papel, diseñando las ideas generales del producto y reflejamos nuestras diferentes perspectivas, para convertirlas en una. Definimos las bases del menu de navegación, donde se ubicará el logo, y la estructura en donde el usuario insertará la información.
+El prototipo de alta fidelidad de este proyecto fue realizado con la plataforma online Figma. Para ver el diseño y la funcionalidad de este haz click [aquí](https://www.figma.com/file/fSgQT36x4jqthGuUZq8i6plx/Sin-restricciones)
 
-Realizamos un sketch en papel, diseñando las ideas generales del producto 
-reflejamos las ideas generales, el menu de navegación, donde se ubicará el logo, y las ideas generales en donde el usuario insertará la información.
-El prototipo de alta fidelidad fue realizado con el programa Figma. 
-Para ver el prototipo y la funcionalidad de este haz click [aquí](https://www.figma.com/file/fSgQT36x4jqthGuUZq8i6plx/Sin-restricciones)
-
-
-### **Metodología de trabajo**
+### Metodología de trabajo
 
 Utilizamos Trello como herramienta para organizar nuestras tareas, y el tiempo que requiere cada una, como también la complejidad de estas.
-Para comunicarnos usamos Slack, en donde creamos un grupo para enviarnos informació y realizar consultas sobre el proyecto. 
+Para comunicarnos usamos Slack, en donde creamos un canal exclusivo para enviarnos información y realizar consultas sobre el proyecto.
 Como alternativa también utilizamos Google Hangouts, para ponernos de acuerdo en el proyecto, cuando no podíamos juntarnos personalmente.
 
-
 ### Desarrollo
+
+Una parte importante de la creación de este proyecto, fue realizar entrevistas a posibles usuarios de la aplicación. Cada una entrevistó a una persona que cumpliera el perfil en el cual nos enfocamos. Eso nos permitió tener una idea mas clara de que es lo que realmente quieren los usuarios y cuales son sus intereses. Estas entrevistas pueden ser encontradas en la carpeta **Documents/User research**. 
+
+También investigamos sobre aplicaciones con características y temáticas similares, encontrando que la gran mayoría se enfoca principalmente en la alimentación para perder peso o mantenerse en forma, pero no en las personas con enfermedades o restricciones alimentarias. Por eso creemos que hay un gran potencial en nuestro proyecto, ya que es un terreno relativamente inexplorado hasta ahora. El benchmark y el análisis de la competencia puede ser encontrado en la carpeta **Documents**.
+
+### ¿Como puedo acceder a **SIN RESTRICCIONES**?
+
+Solamente debes acceder con el siguiente **link** y guardarlo en tus favoritos. Podrás iniciar una sesión con Facebook, Google o crear una cuenta propia con tu correo electrónico y ¡ya estás dentro!. Formarás parte de una comunidad en crecimiento que se fortalece con cada miembro que ingresa y aporta con su granito de arena. ¡Te esperamos!
+
 
 *SITIO EN CONSTRUCCIÓN* Si deseas participar, contáctanos por Issues. Tod@s son bienvenidos! :smiley:
 
