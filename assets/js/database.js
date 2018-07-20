@@ -45,15 +45,8 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <p id="msge">${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
-
-    <button class="btn-edit" onclick="editar('${doc.creator}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button><span>3</span></div>
-
-
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
-
-    <button class="btn-like" onclick="like()"('${doc.id}','${doc.data().text}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
-
+    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
+    <button class="btn-like" onclick="count('${doc.id}','${doc.data().text}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button><span>3</span></div>
     </div>
     `;
 
