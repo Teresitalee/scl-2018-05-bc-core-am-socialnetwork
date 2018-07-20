@@ -49,7 +49,7 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
     <button class="btn-edit" onclick="editar('${doc.creator}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
+    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button><span>3</span></div>
     </div>
     `;
 
@@ -93,15 +93,17 @@ function editar(creator, userText) {
       });
   };
 }
-// Inicializando Base de Datos
-const firestore = firebase.firestore();
-const settings = { /* your settings... */
-  timestampsInSnapshots: true
-};
-firestore.settings(settings);
 
 
 //Contador de likes y guardarlo a DB
+// guardar los conteos de likes
+var count = 0;
+
+function like(count) {
+  contador++;
+  console.log('El contador es:' + contador);
+}
+
 function saveLikeToDB() {
   const db = firebase.firestore();
   let likes = document.getElementById('like-post').value;
@@ -113,30 +115,5 @@ function saveLikeToDB() {
 
 }
 
-// guardar los conteos de likes
-var count = 0;
 
-function count() {
-  contador++;
-  console.log('El contador es:' + contador);
-}
 
-function countLikeInDb() {
-  let currentUser = firebase.auth().currentUser.uid;
-  let currentUserName = firebase.auth().currentUser.displayName;
-  let userText = userInput.value;
-  db.collection('messages').add({
-      feelings: currentUser,
-      post: currentUserName,
-      users: userText,
-
-    })
-    .then((docRef) => {
-      console.log("Document written with ID: ", docRef.id);
-      userInput.value = '';
-    })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
-
-}
