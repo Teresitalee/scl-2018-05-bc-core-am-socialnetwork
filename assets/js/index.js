@@ -6,25 +6,14 @@ function inicializarFire() {
     if (user) {
       let userDisplayName = user.displayName;
       let userPhoto = user.photoURL;
-      goToWall();
       userName.textContent = userDisplayName;
       userPic.style.backgroundImage = 'url(' + userPhoto + ')';
-    } else {
-      goToIndex();
-    }
+    } 
   });
 }
 window.onload = function() {
   inicializarFire();
 };
-
-function goToWall() {
-  location.href = '../../muro.html';
-}
-
-function goToIndex() {
-  location.href = '../../index.html';
-}
 
 function login() {
   const emailValue = email.value;
