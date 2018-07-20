@@ -1,5 +1,3 @@
-
-
 var userPic = document.getElementById('user-pic');
 var userName = document.getElementById('user-name');
 
@@ -122,6 +120,7 @@ const settings = { /* your settings... */
   timestampsInSnapshots: true
 };
 firestore.settings(settings);
+
 //Contador de likes y guardarlo a DB
 function saveLikeToDB(){
   const db = firebase.firestore();
@@ -134,7 +133,6 @@ starCountRef.on('value', function(snapshot) {
  
 }
 
- 
 // Avatar y nombre GOOGLE
 
 var userPic = document.getElementById('user-pic');

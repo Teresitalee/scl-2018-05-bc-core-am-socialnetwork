@@ -1,6 +1,4 @@
-// Initialize Cloud Firestore through Firebase}
-
-
+// Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
 
 // Subir mensajes a DB
@@ -90,13 +88,6 @@ function editar(id, userText) {
       });
   };
 }
-// Inicializando Base de Datos
-const firestore = firebase.firestore();
-const settings = { /* your settings... */
-  timestampsInSnapshots: true
-};
-firestore.settings(settings);
-
 
 //Contador de likes y guardarlo a DB
 function saveLikeToDB() {
