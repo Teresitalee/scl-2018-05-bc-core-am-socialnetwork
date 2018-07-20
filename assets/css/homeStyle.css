@@ -127,5 +127,15 @@ body {
 	height: 60px;
 	margin-top: 1em;
   background-size: 60px;
-	border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 2em;
+}
+
+#name-message{
+  margin-top: -70px;
+  margin-left: 70px;
+}
+
+#msge{
+  margin-top: 2em;
 }

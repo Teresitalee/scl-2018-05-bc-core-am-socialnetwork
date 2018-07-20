@@ -41,8 +41,8 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     <div class="boxMsg">
     <p class="text-center">${doc.data().date}</p>
     <img class="img-fluid avatar" id="avatar" src="${doc.data().creatorAvatar || '/assets/img/pic_user.png'}">
-    <h4 class="text-center">${doc.data().creator}</h4>
-    <p>${doc.data().text}</p>
+    <h4 class="name" id="name-message">${doc.data().creator}</h4>
+    <p id="msge">${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
     <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
