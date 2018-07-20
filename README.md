@@ -27,7 +27,7 @@ También investigamos sobre aplicaciones con características y temáticas simil
 
 ### ¿Como puedo acceder a **SIN RESTRICCIONES**?
 
-Solamente debes acceder con el siguiente **link** y guardarlo en tus favoritos. Podrás iniciar una sesión con Facebook, Google o crear una cuenta propia con tu correo electrónico y ¡ya estás dentro!. Formarás parte de una comunidad en crecimiento que se fortalece con cada miembro que ingresa y aporta con su granito de arena. ¡Te esperamos!
+Solamente debes acceder con el siguiente [link](https://teresitalee.github.io/scl-2018-05-bc-core-am-socialnetwork/) y guardarlo en tus favoritos. Podrás iniciar una sesión con Facebook, Google o crear una cuenta propia con tu correo electrónico y ¡ya estás dentro!. Formarás parte de una comunidad en crecimiento que se fortalece con cada miembro que ingresa y aporta con su granito de arena. ¡Te esperamos!
 
 
 *SITIO EN CONSTRUCCIÓN* Si deseas participar, contáctanos por Issues. Tod@s son bienvenidos! :smiley:
