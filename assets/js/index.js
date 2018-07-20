@@ -21,7 +21,7 @@ function login() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario logueado correctamente');
-      window.open('../muro.html', '_self', 'true');
+      window.open('./muro.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error de Firebase: ' + error.code);
@@ -45,7 +45,7 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado correctamente');
-      window.open('../muro.html', '_self', 'true');
+      window.open('./muro.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error de Firebase: ' + error.code);
@@ -61,7 +61,7 @@ function loginFacebook() {
   firebase.auth().signInWithPopup(provider)
     .then(() => {
       console.log('Usuario logueado correctamente');
-      window.open('../muro.html', '_self', 'true');
+      window.open('./muro.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error de Firebase: ' + error.code);
@@ -82,7 +82,7 @@ function loginGoogle() {
     })
     .then(() => {
       console.log('Usuario logueado correctamente');
-      window.open('../muro.html', '_self', 'true');
+      window.open('./muro.html', '_self', 'true');
     })
     .catch(function (error) {
       console.log('Error de Firebase: ' + error.code);
@@ -96,7 +96,7 @@ function logOut() {
   firebase.auth().signOut()
     .then(() => {
       console.log('Usuario deslogueado correctamente');
-      window.open('../../index.html', '_self', 'true');
+      window.open('./index.html', '_self', 'true');
     })
     .catch((error) => {
       console.log('Error en deslogueo: ' + error);
