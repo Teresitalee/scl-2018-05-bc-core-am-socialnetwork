@@ -106,11 +106,11 @@ function loginGoogle() {
 function logOut() {
   firebase.auth().signOut()
     .then(() => {
-      console.log('Bye Bye');
+      console.log('Usuario deslogueado correctamente');
       window.open('../../index.html', '_self', 'true');
     })
     .catch((error) => {
-      console.log('Permanecerás aca...para siempre!! ' + error);
+      console.log('Error en deslogueo: ' + error);
     });
 }
 
@@ -120,40 +120,3 @@ const settings = { /* your settings... */
   timestampsInSnapshots: true
 };
 firestore.settings(settings);
-
-<<<<<<< HEAD
-=======
-//Contador de likes y guardarlo a DB
-function saveLikeToDB(){
-  const db = firebase.firestore();
-  let likes = document.getElementById('like-post').value;
-
-var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-starCountRef.on('value', function(snapshot) {
-  updateStarCount(postElement, snapshot.val());
-});
- 
-}
->>>>>>> 81df93a658313a275e8f60d42cbb7ebb3a451be1
-
-// Avatar y nombre GOOGLE
-
-var userPic = document.getElementById('user-pic');
-var userName = document.getElementById('user-name');
-
-function InicializarFire() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    /* body... */
-
-    if (user) {
-      let userDisplayName = user.displayName;
-      let userPhoto = user.photoURL;
-
-      userName.textContent = userDisplayName;
-      userPic.style.backgroundImage = 'url(' + userPhoto + ')';
-    }
-  });
-}
-window.onload = function() {
-  InicializarFire();
-};
