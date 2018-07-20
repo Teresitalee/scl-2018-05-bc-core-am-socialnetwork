@@ -1,6 +1,4 @@
-// Initialize Cloud Firestore through Firebase}
-
-
+// Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
 
 // Subir mensajes a DB
@@ -12,16 +10,14 @@ function publishMessageInDb() {
   if (userInput.value == '') {
     alert('Debes ingresar un texto para poder compartir');
   } else {
-    let currentUser = firebase.auth().currentUser.uid;
-    let currentUserName = firebase.auth().currentUser.displayName;
-    let userText = userInput.value;
+    const currentUser = firebase.auth().currentUser;
     let time = new Date().getTime();
     let date = new Date(time).toLocaleString();
+    let userText = userInput.value;
     db.collection('messages').add({
-        creator: currentUser,
-        userName: currentUserName,
-        text: userText,
-        date: date
+    creator: currentUser.displayName,
+    text: userText,
+    date: date
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -43,13 +39,17 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     userPosts.innerHTML += `
     <div class="boxMsg">
     <p class="text-center">${doc.data().date}</p>
-    <h4 class="text-center">${doc.id}</h4>
-    <p class="text-center">${doc.data().creator}</p>
+    <h4 class="text-center">${doc.data().creator}</h4>
     <p>${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
+<<<<<<< HEAD
     <button class="btn-edit" onclick="editar('${doc.creator}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
     <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button><span>3</span></div>
+=======
+    <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
+    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
+>>>>>>> 81df93a658313a275e8f60d42cbb7ebb3a451be1
     </div>
     `;
 
@@ -70,22 +70,22 @@ function eliminar(id) {
 }
 
 //Funcion editar
-function editar(creator, userText) {
+function editar(id, userText) {
   document.getElementById('userInput').value = userText;
   let boton = document.getElementById('publishBtn');
   boton.innerHTML = 'Editar';
   //ejecutar funcion boton editar
   boton.onclick = function () {
-    let messageRef = db.collection("messages").doc(creator);
+    let messageRef = db.collection("messages").doc(id);
     //cambiar y editar el mensaje del usuario, y guardadas en variables
     let userText = document.getElementById('userInput').value;
     return messageRef.update({
-        text: userText,
+      text: userText,
       })
       .then(function () {
         console.log("editado!");
         boton.innerHTML = 'Publicar';
-        document.getElementById('messages').value = '';
+        document.getElementById('userInput').value = '';
       })
       .catch(function (error) {
         // The document probably doesn't exist.
@@ -93,7 +93,10 @@ function editar(creator, userText) {
       });
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81df93a658313a275e8f60d42cbb7ebb3a451be1
 
 //Contador de likes y guardarlo a DB
 // guardar los conteos de likes
@@ -114,6 +117,8 @@ function saveLikeToDB() {
   });
 
 }
+  
+
 
 
 

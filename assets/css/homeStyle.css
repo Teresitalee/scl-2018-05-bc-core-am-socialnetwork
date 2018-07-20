@@ -51,14 +51,13 @@ body {
   background-color: rgb(51, 153, 204, 0.1);
   text-align: left;
   margin-bottom: 6em;
-  padding: 0 16%;
+  padding: 0 6%;
 }
 
 /* Diseño y estilo a iconos post */
 .icon{
-  
   display: inline;
-  margin-left: 8em;
+  margin-left: -1.1em;
   
 }
 
@@ -87,16 +86,35 @@ body {
 
 
  /* botones post publicar y privacidad */
- .btn-publish{
-  display: inline-flex;
-  margin-left: 30em;
-}
+ 
 
 #publishBtn{
-  color: #7ba83f;
+  background-color: #18e47e;
+  color: #ffffff;
+  padding: 17px;
+ margin-bottom: 2em;
 }
 
 #publishBtn:hover{
-  color: rgb(240, 243, 255);
+  background-color: #7febd0;
+  display: inline;
+  
+}
 
+#btn-friends{
+  background-color: #18e47e;
+  display: inline;
+  padding: 17px;
+}
+
+#btn-friends:hover{
+  background-color: #7febd0;
+  display: inline;
+  
+}
+
+.buttons-Post{
+  display: blo;
+  margin-left: 20em;
+  
 }
