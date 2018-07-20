@@ -17,7 +17,8 @@ function publishMessageInDb() {
     db.collection('messages').add({
     creator: currentUser.displayName,
     text: userText,
-    date: date
+    date: date,
+    creatorAvatar: currentUser.photoURL
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -39,12 +40,13 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     userPosts.innerHTML += `
     <div class="boxMsg">
     <p class="text-center">${doc.data().date}</p>
+    <img class="img-fluid avatar" id="avatar" src="${doc.data().creatorAvatar || '/assets/img/pic_user.png'}">
     <h4 class="text-center">${doc.data().creator}</h4>
     <p>${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
     <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
+    <button class="btn-like" onclick="like()"('${doc.id}','${doc.data().text}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
 
@@ -90,6 +92,38 @@ function editar(id, userText) {
 }
 
 //Contador de likes y guardarlo a DB
+
+//Boton me gusta
+
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+admin.initializeApp();
+
+// Keeps track of the length of the 'likes' child list in a separate property.
+exports.countlikechange = functions.database.ref('/posts/{postid}/likes/{likeid}').onWrite(
+    (change) => {
+      const collectionRef = change.after.ref.parent;
+      const countRef = collectionRef.parent.child('likes_count');
+
+      let increment;
+      if (change.after.exists() && !change.before.exists()) {
+        increment = 1;
+      } else if (!change.after.exists() && change.before.exists()) {
+        increment = -1;
+      } else {
+        return null;
+      }
+
+      // Return the promise from countRef.transaction() so our function
+      // waits for this async event to complete before it exits.
+      return countRef.transaction((current) => {
+        return (current || 0) + increment;
+      }).then(() => {
+        return console.log('Counter updated.');
+      });
+    });
+
+/*
 function saveLikeToDB() {
   const db = firebase.firestore();
   let likes = document.getElementById('like-post').value;
@@ -130,3 +164,4 @@ function countLikeInDb() {
     });
 
 }
+*/
