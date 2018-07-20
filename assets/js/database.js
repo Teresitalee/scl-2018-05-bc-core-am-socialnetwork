@@ -17,7 +17,8 @@ function publishMessageInDb() {
     db.collection('messages').add({
     creator: currentUser.displayName,
     text: userText,
-    date: date
+    date: date,
+    creatorAvatar: currentUser.photoURL
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -39,12 +40,13 @@ db.collection("messages").onSnapshot((querySnapshot) => {
     userPosts.innerHTML += `
     <div class="boxMsg">
     <p class="text-center">${doc.data().date}</p>
-    <h4 class="text-center">${doc.data().creator}</h4>
-    <p>${doc.data().text}</p>
+    <img class="img-fluid avatar" id="avatar" src="${doc.data().creatorAvatar || '/assets/img/pic_user.png'}">
+    <h4 class="name" id="name-message">${doc.data().creator}</h4>
+    <p id="msge">${doc.data().text}</p>
     <div class="icon">
     <button class="btn-delete" onclick="eliminar('${doc.id}')" id="icon-post"><i class="fas fa-trash-alt iconPost""></i></button>
     <button class="btn-edit" onclick="editar('${doc.id}', '${doc.data().text}')"><i class="fas fa-edit iconPost""></i></button>
-    <button class="btn-like" onclick="count('${doc.id}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
+    <button class="btn-like" onclick="like()"('${doc.id}','${doc.data().text}')" id="icon-like"><i class="fas fa-heartbeat iconPost"></i></button></div>
     </div>
     `;
 
@@ -89,7 +91,8 @@ function editar(id, userText) {
   };
 }
 
-//Contador de likes y guardarlo a DB
+//Boton me gusta
+
 function saveLikeToDB() {
   const db = firebase.firestore();
   let likes = document.getElementById('like-post').value;
